@@ -1,0 +1,79 @@
+.cart-container {
+  display: flex;
+  justify-content: center;
+  min-height: 75vh;
+}
+.changeToRightRemoveAllButton {
+  text-align: right;
+}
+.romoveAllButtonStyle {
+  border: 0px;
+  background-color: #ffffff;
+  color: #0b69ff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.OrderTotalAmount {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+.CheckOut {
+  background-color: #0b69ff;
+  border: 0px;
+  color: #ffffff;
+  border-radius: 4px;
+  height: 33px;
+  flex-wrap: wrap;
+  font-weight: 600;
+  width: 100%;
+}
+.totalAmount {
+  flex-wrap: wrap;
+}
+.oderTotal {
+  font-size: 17px;
+  color: #616e7c;
+}
+.h1 {
+  font-size: 22px;
+  color: #171f46;
+}
+.p {
+  color: #616e7c;
+}
+@media screen and (min-width: 768px) {
+  .cart-container {
+    min-height: 90vh;
+  }
+}
+
+.cart-content-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1110px;
+}
+
+@media screen and (min-width: 768px) {
+  .cart-content-container {
+    width: 80%;
+    max-width: 1110px;
+  }
+}
+
+.cart-heading {
+  color: #3e4c59;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .cart-heading {
+    font-size: 48px;
+  }
+}
+
+/* Write your CSS here */
