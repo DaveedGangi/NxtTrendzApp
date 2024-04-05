@@ -28,6 +28,10 @@
   flex-wrap: wrap;
   font-weight: 600;
   width: 100%;
+  cursor: pointer;
+}
+.checkOutStyle {
+  margin-bottom: 13px;
 }
 .totalAmount {
   flex-wrap: wrap;
@@ -43,6 +47,7 @@
 .p {
   color: #616e7c;
 }
+
 @media screen and (min-width: 768px) {
   .cart-container {
     min-height: 90vh;
@@ -77,3 +82,79 @@
 }
 
 /* Write your CSS here */
+
+.bgForPopup {
+  background-color: #171f46;
+  color: #ffffff;
+}
+
+.PopUpCard {
+  background-color: #171f46;
+  color: #ffffff;
+  padding: 22px;
+  border-radius: 7px;
+}
+.OrderPlaced {
+  background-color: coral;
+  color: #ffffff;
+  padding: 22px;
+  border-radius: 22px;
+}
+.show {
+  background-color: #0b69ff;
+  color: aliceblue;
+  border: 0px;
+  border-radius: 7px;
+  width: 130px;
+  height: 34px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.Hiding {
+  border: 0px;
+  border-radius: 7px;
+  width: 130px;
+  height: 34px;
+  font-weight: 600;
+}
+.showing {
+  border: 0px;
+  border-radius: 7px;
+  width: 130px;
+  height: 34px;
+  font-weight: 600;
+}
+.hiding {
+  display: none;
+}
+.CloseButton {
+  background-color: coral;
+  color: aliceblue;
+  height: 34px;
+  width: 88px;
+  margin-top: 12px;
+  border: 0px;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .ButtonForEnableAndDisable {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .closeButtonFlex {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 22px;
+  }
+}
+
+.order-placed-para {
+  font-weight: 600;
+}

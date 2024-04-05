@@ -15,14 +15,11 @@ import './App.css'
 class App extends Component {
   state = {
     cartList: [],
+    basedOnPaymentMethod: false,
   }
-
-  //   TODO: Add your code for remove all cart items, increment cart item quantity, decrement cart item quantity, remove cart item
 
   addCartItem = product => {
     const {cartList} = this.state
-    //   TODO: Update the code here to implement addCartItem
-    // this.setState(prevState => ({cartList: [...prevState.cartList, product]}))
 
     const findingBasedOnId = cartList.find(
       eachCart => eachCart.id === product.id,
@@ -39,7 +36,9 @@ class App extends Component {
         }),
       }))
     } else {
-      this.setState(prevState => ({cartList: [...prevState.cartList, product]}))
+      this.setState(prevState => ({
+        cartList: [...prevState.cartList, product],
+      }))
     }
   }
 
@@ -84,8 +83,16 @@ class App extends Component {
     this.setState({cartList: []})
   }
 
+  changeBasedOnPaymentMethod = () => {
+    this.setState({basedOnPaymentMethod: true})
+  }
+
+  changeBasedOnOtherInputs = () => {
+    this.setState({basedOnPaymentMethod: false})
+  }
+
   render() {
-    const {cartList} = this.state
+    const {cartList, basedOnPaymentMethod} = this.state
 
     return (
       <CartContext.Provider
@@ -96,6 +103,9 @@ class App extends Component {
           decrementCartItemQuantity: this.decrementCartItemQuantity,
           incrementCartItemQuantity: this.incrementCartItemQuantity,
           removeAllCartItems: this.removeAllCartItems,
+          basedOnPaymentMethod,
+          changeBasedOnPaymentMethod: this.changeBasedOnPaymentMethod,
+          changeBasedOnOtherInputs: this.changeBasedOnOtherInputs,
         }}
       >
         <Switch>
